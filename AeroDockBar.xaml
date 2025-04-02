@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="template.AeroDockBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Height="50">
+    <Border Background="{StaticResource DockbarBrush}" CornerRadius="10" MouseDown="DragWindow">
+        <DockPanel>
+            <!-- Window Control Buttons -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+                <Button Width="30" Height="30" Click="MinimizeWindow" Style="{StaticResource MinimizeButtonStyle}" Content="_"/>
+                <Button Width="30" Height="30" Click="MaximizeWindow" Style="{StaticResource MaximizeButtonStyle}" Content="▢"/>
+                <Button Width="30" Height="30" Click="CloseWindow" Style="{StaticResource CloseButtonStyle}" Content="X"/>
+            </StackPanel>
+        </DockPanel>
+    </Border>
+</UserControl>

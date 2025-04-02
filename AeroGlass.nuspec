@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package>
+	<metadata>
+		<id>AeroGlass</id>
+		<version>1.0.0</version>
+		<authors>FireFlyStudio</authors>
+		<description>AeroGlass template for elegant UIs</description>
+	</metadata>
+	<files>
+		<file src="E:\Creations\AppCreation\template\template\AeroDockBar.xaml" target="content" />
+		<file src="E:\Creations\AppCreation\template\template\AeroDockBar.xaml.cs" target="content" />
+		<file src="E:\Creations\AppCreation\template\template\AeroStyles.xaml" target="content" />
+		<file src="E:\Creations\AppCreation\template\template\AeroWindow.xaml" target="content" />
+		<file src="E:\Creations\AppCreation\template\template\AeroWindow.xaml.cs" target="content" />
+		<file src="E:\Creations\AppCreation\template\template\App.xaml" target="content" />
+		<file src="E:\Creations\AppCreation\template\template\App.xaml.cs" target="content" />
+	</files>
+</package>

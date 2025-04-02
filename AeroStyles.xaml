@@ -1,0 +1,91 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Dockbar Background -->
+    <LinearGradientBrush x:Key="DockbarBrush" StartPoint="0,0" EndPoint="1,1">
+        <GradientStop Color="#33FFFFFF" Offset="0.0"/>
+        <GradientStop Color="#11AAAAAA" Offset="1.0"/>
+    </LinearGradientBrush>
+
+    <!-- Minimize Button Style -->
+    <Style x:Key="MinimizeButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource DockbarBrush}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <!-- Blurred Background -->
+                        <Border x:Name="MinimizeBackground" Background="{TemplateBinding Background}" CornerRadius="10">
+                            <Border.Effect>
+                                <BlurEffect Radius="8"/>
+                            </Border.Effect>
+                        </Border>
+                        <!-- Sharp Icon -->
+                        <TextBlock Text="_" Foreground="White" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                    <!-- Hover Trigger (Change Button.Background instead) -->
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="DarkGray"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Maximize Button Style -->
+    <Style x:Key="MaximizeButtonStyle" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <!-- Blurred Background -->
+                        <Border x:Name="MaximizeBackground" Background="{StaticResource DockbarBrush}" CornerRadius="10">
+                            <Border.Effect>
+                                <BlurEffect Radius="8"/>
+                            </Border.Effect>
+                        </Border>
+                        <!-- Sharp Icon -->
+                        <TextBlock Text="▢" Foreground="White" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                    <!-- Hover Trigger -->
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="MaximizeBackground" Property="Background" Value="DarkGray"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <!-- Close Button Style -->
+    <!-- Close Button Style -->
+    <Style x:Key="CloseButtonStyle" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <!-- Blurred Background -->
+                        <Border x:Name="CloseBackground" Background="{StaticResource DockbarBrush}" CornerRadius="10">
+                            <Border.Effect>
+                                <BlurEffect Radius="8"/>
+                            </Border.Effect>
+                        </Border>
+                        <!-- Sharp Icon -->
+                        <TextBlock Text="X" Foreground="White" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                    <!-- Hover Trigger -->
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="CloseBackground" Property="Background" Value="#FFCC0000"/>
+                            <!-- Red hover effect -->
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
